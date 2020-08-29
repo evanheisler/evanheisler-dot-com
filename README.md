@@ -17,3 +17,11 @@ docker-compose up
 ```bash
 docker-compose start # docker-compose stop
 ```
+
+## Deploy
+
+### Client
+
+```bash
+cd client && vercel --prod
+```
