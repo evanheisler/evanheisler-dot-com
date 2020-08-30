@@ -1,20 +1,20 @@
 import { useState } from "react";
-import Head from "next/head";
 import FitText from "@kennethormandy/react-fittext";
+import HtmlHead from "../components/HtmlHead";
+import Social from "../components/Social";
 
 const Home = ({ headline, personalAttributes }) => {
   const [attr, setAttr] = useState(personalAttributes[0].personalAttribute);
   const segments = headline.split(" ");
 
   return (
-    <div className="container h-screen">
-      <Head>
-        <title>Evan Heisler is a software engineer</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <div className="container h-screen flex flex-col">
+      <HtmlHead title={`Evan Heisler is ${attr}`} />
 
-      <main className="h-screen ml-6 md:ml-12">
-        <h1 className="leading-none justify-center flex flex-col h-screen w-11/12 md:w-4/5">
+      <Social />
+
+      <main className="ml-6 md:ml-12 flex flex-1">
+        <h1 className="leading-none justify-center flex flex-col w-11/12 md:w-4/5">
           <FitText compressor={0.35} maxFontSize={240}>
             <div className="tracking-tight">{segments[0]}</div>
           </FitText>
