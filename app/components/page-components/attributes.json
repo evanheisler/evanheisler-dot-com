@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_page_components_attributes",
+  "info": {
+    "name": "TextField",
+    "icon": "allergies"
+  },
+  "options": {},
+  "attributes": {
+    "personalAttribute": {
+      "type": "string"
+    }
+  }
+}
