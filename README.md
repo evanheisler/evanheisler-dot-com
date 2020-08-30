@@ -12,6 +12,12 @@
 docker-compose up
 ```
 
+### Update (images)
+
+```bash
+docker-compose up --build
+```
+
 ### Start
 
 ```bash
