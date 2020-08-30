@@ -25,3 +25,9 @@ docker-compose start # docker-compose stop
 ```bash
 cd client && vercel --prod
 ```
+
+### Backend
+
+```bash
+git subtree push --prefix app heroku master
+```
