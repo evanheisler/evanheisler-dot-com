@@ -2,7 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap");
+
+body,
+html {
+  height: 100%;
+}
 
 body {
   font-family: "Lora", serif;
@@ -14,7 +19,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Libre Franklin", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
 }
 

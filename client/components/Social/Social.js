@@ -1,5 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion } from "framer-motion";
+import { staggerWithChildren, fadeIn } from "../Animate/utils";
 
 const Social = () => {
   let links = [
@@ -30,19 +32,24 @@ const Social = () => {
   ];
 
   return (
-    <section className="ml-6 md:ml-16 mt-4 text-lg">
+    <motion.section
+      variants={staggerWithChildren({ delayChildren: 1 })}
+      className="ml-6 md:ml-16 mt-4 text-xl"
+    >
       {links.map(({ href, icon }) => (
-        <a
-          className="inline-block mr-2 duration-200 ease-out transition transform hover:scale-150"
+        <motion.a
+          variants={fadeIn()}
+          whileHover={{ scale: 1.2 }}
+          className="inline-block mr-4"
           key={icon[1]}
           href={href}
           target="_blank"
           rel="noreferrer"
         >
           <FontAwesomeIcon icon={icon} />
-        </a>
+        </motion.a>
       ))}
-    </section>
+    </motion.section>
   );
 };
 
