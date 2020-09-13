@@ -1,5 +1,4 @@
 import { useState } from "react";
-import FitText from "@kennethormandy/react-fittext";
 import { motion } from "framer-motion";
 import HtmlHead from "../components/HtmlHead";
 import Social from "../components/Social";
@@ -47,40 +46,34 @@ const Home = ({ headline, personalAttributes }) => {
       <main className="ml-6 md:ml-12 flex flex-1">
         <motion.h1
           variants={staggerWithChildren()}
-          className="leading-none justify-center flex flex-col w-11/12 md:w-4/5"
+          className="leading-none justify-center flex flex-col w-11/12 lg:w-4/5"
         >
-          <FitText compressor={0.35} maxFontSize={200}>
-            <motion.div
-              variants={fadeIn({ y: 100 })}
-              className="tracking-tight"
-            >
-              {segments[0]}
-            </motion.div>
-          </FitText>
+          <motion.div
+            variants={fadeIn({ y: 100 })}
+            className="tracking-tight text-6xl md:text-8xl lg:text-10xl"
+          >
+            {segments[0]}
+          </motion.div>
 
-          <FitText compressor={0.35} maxFontSize={200}>
-            <motion.div
-              variants={fadeIn({ y: 100 })}
-              className="tracking-tight"
-            >
-              {segments[1]}
-            </motion.div>
-          </FitText>
+          <motion.div
+            variants={fadeIn({ y: 100 })}
+            className="tracking-tight text-6xl md:text-8xl lg:text-10xl"
+          >
+            {segments[1]}
+          </motion.div>
 
-          <FitText compressor={1.4}>
-            <motion.div
-              variants={fadeIn({ y: 100 })}
-              className="flex flex-row mt-2 md:mt-4 ml-2 relative overflow-y-hidden"
-            >
-              <span>{segments[2]}</span>
+          <motion.div
+            variants={fadeIn({ y: 100 })}
+            className="flex flex-row mt-2 md:mt-4 ml-2 relative overflow-hidden text-2xl md:text-5xl lg:text-6xl"
+          >
+            <span>{segments[2]}</span>
 
-              <AttributesScroller
-                attr={attr}
-                selectAttr={handleSelectAttr}
-                personalAttributes={personalAttributes}
-              />
-            </motion.div>
-          </FitText>
+            <AttributesScroller
+              attr={attr}
+              selectAttr={handleSelectAttr}
+              personalAttributes={personalAttributes}
+            />
+          </motion.div>
         </motion.h1>
       </main>
     </motion.div>
