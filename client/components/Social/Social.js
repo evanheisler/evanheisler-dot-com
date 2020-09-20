@@ -26,7 +26,7 @@ const Social = () => {
       icon: ["fas", "at"],
     },
     {
-      href: "/evan-heisler-resume.pdf",
+      href: "/evan_heisler_resume.pdf",
       icon: ["fas", "file-pdf"],
     },
   ];
